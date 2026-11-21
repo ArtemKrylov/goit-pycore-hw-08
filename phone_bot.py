@@ -76,8 +76,8 @@ class PhoneBot:
         while True:
             try:
                 user_input = input("Enter a command: ")
-            except KeyboardInterrupt:
-                print("\nGood bye!")
+            except (KeyboardInterrupt, EOFError):
+                print("\nGoodbye!")
                 break
 
             if not user_input or not user_input.strip():
